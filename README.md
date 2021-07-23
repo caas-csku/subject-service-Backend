@@ -21,8 +21,19 @@
 2. นำค่าของ environment ของ mysql มาใส่ลงใน .env (DB_DATABASE, DB_DATABASE, DB_PASSWORD)
 3. สั่ง ``docker-compose exec php php artisan migrate`` เพื่อ migrate ตารางใน Mysql container
 4. ลองเรียก API 
-    * `get` http://localhost:8088/api/posts
-    * `post` http://localhost:8088/api/posts
+    * `get all` http://localhost:8088/api/subject
+    
+    * `post` http://localhost:8088/api/subject
+   
+    * `get 1` http://localhost:8088/api/subject/```<code-year>``` ex /api/subject/
+    01418112-60
+    
+    * `update` http://localhost:8088/api/subject/```<id>``` ex /api/subject/1
+    
+        * Request => ['(str) code', '(str) name_th', '(str) name_en', '(int) year']
+    
+    * `delete` http://localhost:8088/api/subject/```<code-year>``` ex /api/subject/01418112-60 
+
 
 ## structure
 ```
